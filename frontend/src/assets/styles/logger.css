@@ -1,0 +1,32 @@
+/* frame transfer priority */
+.exceptional {
+  color: purple;
+}
+
+.immediate {
+  color: blue;
+}
+
+.fast {
+  color: cyan;
+}
+
+.high {
+  color: lightskyblue;
+}
+
+.nominal {
+  color: black;
+}
+
+.low {
+  color: yellow;
+}
+
+.slow {
+  color: burlywood;
+}
+
+.optional {
+  color: gray;
+}

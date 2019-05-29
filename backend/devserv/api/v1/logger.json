@@ -1,0 +1,41 @@
+[
+  {
+    "time": 123,
+    "transportHeader": "this for now",
+    "priority": "immediate",
+    "routeSpecifier": {
+      "source": 35,
+      "destination": 102
+    },
+    "dataSpecifier": {
+      "subjectId": 5,
+      "metadata": {
+        "name": "test",
+        "version": "1.0"
+      },
+      "transferId": 0
+    },
+    "dataHex": "cd 66 53 5c 5b 08 bf fa d4 45",
+    "dataAscii": "..sNip..aSXIIuoi..ofjX"
+  },
+  {
+    "time": 124,
+    "transportHeader": "different one",
+    "priority": "slow",
+    "routeSpecifier": {
+      "source": 35,
+      "destination": 102
+    },
+    "dataSpecifier": {
+      "serviceId": 30,
+      "selector": 19,
+      "metadata": {
+        "name": "othertest",
+        "version": "1.1"
+      },
+      "transferId": 2
+    },
+    "dataHex": "ab 56 78 5a 3b 08 00 ff f0 4c",
+    "dataAscii": "..sNip..aSXIIuoi..ofjX"
+  }
+]

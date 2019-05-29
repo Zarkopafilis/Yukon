@@ -4,6 +4,7 @@ import Home from '@/components/Home/Home'
 import NodeInfoPage from '@/components/NodeInfo/NodeInfoPage'
 import GlobalRegisterView from '@/components/GlobalRegisterView/GlobalRegisterView'
 import Plotter from '@/components/Plotter/Plotter'
+import Logger from '@/components/Logger/Logger'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ const AppRoutes = {
     path: '/plotter',
     name: 'Plotter',
     component: Plotter
+  },
+  Logger: {
+    path: '/logger',
+    name: 'Logger',
+    component: Logger
   }
 }
 
@@ -36,7 +42,7 @@ export const AppRouter = new Router({
 })
 
 AppRouter.beforeEach((to, from, next) => {
-  document.title = `Yukon: ${to.name}`
+  document.title = `${to.name} | Yukon`
   next()
 })
 

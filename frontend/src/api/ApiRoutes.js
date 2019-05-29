@@ -12,6 +12,7 @@ const Base = ApiBaseUrl + BasePrefix + '/v1'
 const NodesBase = Base + '/nodes'
 const TypesBase = Base + '/types'
 const BusBase = Base + '/bus'
+const LoggerBase = Base + '/logger'
 
 const ApiRoutes = {
   ApiBaseUrl: ApiBaseUrl,
@@ -34,6 +35,9 @@ const ApiRoutes = {
   Bus: {
     GetInfo: BusBase,
     Monitor: BusBase + '/monitor'
+  },
+  Logger: {
+    Get: LoggerBase
   },
   EventSource: Base + '/eventSource'
 }

@@ -48,7 +48,7 @@ export default {
   name: 'App',
   data () {
     return {
-      navigationRouteOptions: [AppRoutes.Home, AppRoutes.GlobalRegisterView, AppRoutes.Plotter]
+      navigationRouteOptions: [AppRoutes.Home, AppRoutes.GlobalRegisterView, AppRoutes.Plotter, AppRoutes.Logger]
     }
   },
   methods: {
@@ -66,21 +66,22 @@ export default {
 </script>
 
 <style>
-  @import './assets/styles/core.css';
-  @import './assets/styles/nodeStatus.css';
+@import './assets/styles/core.css';
+@import './assets/styles/nodeStatus.css';
+@import './assets/styles/logger.css';
 
-  #navBar {
-    width: 100%;
-    background-color: #6c757d;
-  }
+#navBar {
+  width: 100%;
+  background-color: #6c757d;
+}
 
-  #navBar > a {
-    font-size: 24px;
-    color: white;
-  }
+#navBar > a {
+  font-size: 24px;
+  color: white;
+}
 
-  #navBar > a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
+#navBar > a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 </style>
