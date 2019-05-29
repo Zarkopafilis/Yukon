@@ -1,0 +1,20 @@
+<!--
+ * Copyright (C) 2019 UAVCAN Development Team  <uavcan.org>
+ * This software is distributed under the terms of the MIT License.
+ *
+ * Author: Theodoros Ntakouris <zarkopafilis@gmail.com>
+ -->
+
+<template>
+  <td>{{ id }}</td>
+</template>
+
+<script>
+export default {
+  name: 'TransferIdData',
+  props: ['id']
+}
+</script>
+
+<style>
+</style>

@@ -1,32 +1,64 @@
 /* frame transfer priority */
 .exceptional {
-  color: purple;
+  color: #3f003a;
+}
+
+.exceptional-bg {
+  background-color: #b203a3;
 }
 
 .immediate {
-  color: blue;
+  color: #00291d;
+}
+
+.immediate-bg {
+  background-color: #03d89c9f;
 }
 
 .fast {
-  color: cyan;
+  color: rgb(71, 5, 13);
+}
+
+.fast-bg {
+  background-color: rgba(255, 204, 204, 0.746);
 }
 
 .high {
-  color: lightskyblue;
+  color: rgb(63, 62, 14);
+}
+
+.high-bg {
+  background-color: rgba(255, 254, 205, 0.719);
 }
 
 .nominal {
-  color: black;
+  color: #013e49;
+}
+
+.nominal-bg {
+  background-color: rgba(145, 255, 255, 0.753);
 }
 
 .low {
-  color: yellow;
+  color: rgb(8, 13, 94);
+}
+
+.low-bg {
+  background-color: #CBCDFF;
 }
 
 .slow {
-  color: burlywood;
+  color: rgb(122, 26, 26);
+}
+
+.slow-bg {
+  background-color: rgba(226, 176, 110, 0.719);
 }
 
 .optional {
-  color: gray;
+  color: black;
+}
+
+.optional-bg {
+  background-color: gray;
 }

@@ -11,47 +11,26 @@
   <table class="table table-sm table-bordered">
   <thead>
     <tr>
-      <th>time</th>
+      <th>monotonic</th>
       <th>transport header</th>
       <th>priority</th>
       <th>route</th>
       <th>data specifier</th>
+      <th>transfer id</th>
       <th>hex</th>
       <th>ascii</th>
     </tr>
   </thead>
   <tbody>
     <tr v-for="(frame, index) in frames" :key="`frame-${index}`">
-      <td>{{ frame.time }}</td>
-      <td>{{ frame.transportHeader }}</td>
-      <td :class="frame.priority">{{ frame.priority }}</td>
-      <td>
-        <p>{{ frame.routeSpecifier.source }}</p>
-        <p>{{ frame.routeSpecifier.destination }}</p>
-      </td>
-
-      <td>
-        <p v-if="frame.dataSpecifier.subjectId">
-          {{ frame.dataSpecifier.subjectId }}
-        </p>
-        <div v-if="frame.dataSpecifier.serviceId" class="inline">
-          <p>{{ frame.dataSpecifier.serviceId }}</p>
-          <p>{{ frame.dataSpecifier.selector }}</p>
-        </div>
-
-        <div v-if="frame.dataSpecifier.metadata" class="inline" style="float: right;">
-          <p v-if="frame.dataSpecifier.metadata.name">
-            {{ frame.dataSpecifier.metadata.name }}
-          </p>
-
-          <p v-if="frame.dataSpecifier.metadata.version">
-            {{ frame.dataSpecifier.metadata.version }}
-          </p>
-        </div>
-      </td>
-
-      <td>{{ frame.dataHex }}</td>
-      <td>{{ frame.dataAscii }}</td>
+      <MonotonicData :time="frame.monotonic" :index="index"/>
+      <TransportHeaderData :header="frame.transportHeader" />
+      <PriorityData :priority="frame.priority"/>
+      <RouteSpecifierData :routeSpecifier="frame.routeSpecifier" />
+      <DataSpecifierData :dataSpecifier="frame.dataSpecifier" />
+      <TransferIdData :id="frame.transferId" />
+      <FramePayloadData :data="frame.dataHex" />
+      <FramePayloadData :data="frame.dataAscii" />
     </tr>
   </tbody>
   </table>
@@ -64,8 +43,25 @@
 import axios from 'axios'
 import ApiRoutes from '@/api/ApiRoutes'
 
+import PriorityData from './PriorityData'
+import MonotonicData from './MonotonicData'
+import TransportHeaderData from './TransportHeader/TransportHeaderData'
+import TransferIdData from './TransferIdData'
+import FramePayloadData from './FramePayloadData'
+import DataSpecifierData from './DataSpecifier/DataSpecifierData'
+import RouteSpecifierData from './RouteSpecifierData'
+
 export default {
   name: 'Logger',
+  components: {
+    PriorityData,
+    MonotonicData,
+    TransportHeaderData,
+    TransferIdData,
+    FramePayloadData,
+    DataSpecifierData,
+    RouteSpecifierData
+  },
   async mounted () {
     await this.loadInitial()
   },
@@ -94,7 +90,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 p, .inline {
   display: inline-block;
   padding-bottom: 0;

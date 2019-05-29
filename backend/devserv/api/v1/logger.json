@@ -1,6 +1,6 @@
 [
   {
-    "time": 123,
+    "monotonic": 123,
     "transportHeader": "this for now",
     "priority": "immediate",
     "routeSpecifier": {
@@ -12,14 +12,109 @@
       "metadata": {
         "name": "test",
         "version": "1.0"
-      },
-      "transferId": 0
+      }
     },
+    "transferId": 0,
     "dataHex": "cd 66 53 5c 5b 08 bf fa d4 45",
     "dataAscii": "..sNip..aSXIIuoi..ofjX"
   },
   {
-    "time": 124,
+    "monotonic": 200,
+    "transportHeader": "this for now",
+    "priority": "fast",
+    "routeSpecifier": {
+      "source": 30,
+      "destination": 67
+    },
+    "dataSpecifier": {
+      "subjectId": 5,
+      "metadata": {
+        "name": "asdf",
+        "version": "2.2"
+      }
+    },
+    "transferId": 5,
+    "dataHex": "cd 22 2a bb bf f5 5a 38",
+    "dataAscii": "..sasdf.SifxcioX...f.ofjX"
+  },
+  {
+    "monotonic": 400,
+    "transportHeader": "this for now",
+    "priority": "optional",
+    "routeSpecifier": {
+      "source": 30,
+      "destination": 67
+    },
+    "dataSpecifier": {
+      "subjectId": 5,
+      "metadata": {
+        "name": "asdf",
+        "version": "2.2"
+      }
+    },
+    "transferId": 5,
+    "dataHex": "cd 22 2a bb bf f5 5a 38",
+    "dataAscii": "..sasdf.SifxcioX...f.ofjX"
+  },
+  {
+    "monotonic": 500,
+    "transportHeader": "this for now",
+    "priority": "low",
+    "routeSpecifier": {
+      "source": 30,
+      "destination": 67
+    },
+    "dataSpecifier": {
+      "subjectId": 5,
+      "metadata": {
+        "name": "asdf",
+        "version": "2.2"
+      }
+    },
+    "transferId": 5,
+    "dataHex": "cd 22 2a bb bf f5 5a 38",
+    "dataAscii": "..sasdf.SifxcioX...f.ofjX"
+  },
+  {
+    "monotonic": 503,
+    "transportHeader": "this for now",
+    "priority": "high",
+    "routeSpecifier": {
+      "source": 30,
+      "destination": 67
+    },
+    "dataSpecifier": {
+      "subjectId": 5,
+      "metadata": {
+        "name": "asdf",
+        "version": "2.2"
+      }
+    },
+    "transferId": 5,
+    "dataHex": "cd 22 2a bb bf f5 5a 38",
+    "dataAscii": "..sasdf.SifxcioX...f.ofjX"
+  },
+  {
+    "monotonic": 505,
+    "transportHeader": "this for now",
+    "priority": "nominal",
+    "routeSpecifier": {
+      "source": 30,
+      "destination": 67
+    },
+    "dataSpecifier": {
+      "subjectId": 5,
+      "metadata": {
+        "name": "asdf",
+        "version": "2.2"
+      }
+    },
+    "transferId": 5,
+    "dataHex": "cd 22 2a bb bf f5 5a 38",
+    "dataAscii": "..sasdf.SifxcioX...f.ofjX"
+  },
+  {
+    "monotonic": 124,
     "transportHeader": "different one",
     "priority": "slow",
     "routeSpecifier": {
@@ -32,9 +127,9 @@
       "metadata": {
         "name": "othertest",
         "version": "1.1"
-      },
-      "transferId": 2
+      }
     },
+    "transferId": 2,
     "dataHex": "ab 56 78 5a 3b 08 00 ff f0 4c",
     "dataAscii": "..sNip..aSXIIuoi..ofjX"
   }
